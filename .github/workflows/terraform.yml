@@ -32,7 +32,7 @@ jobs:
         terraform_version: ${{ env.TF_VERSION }}
 
     - name: Terraform Init
-      run: terraform init -migrate-state
+      run: terraform init  -reconfigure    # -migrate-state 0r -reconfigure
 
     - name: Terraform Plan
       run: terraform plan
