@@ -31,8 +31,8 @@ jobs:
       with:
         terraform_version: ${{ env.TF_VERSION }}
 
-    # - name: Terraform Init
-    #   run: terraform init -reconfigure
+    - name: Terraform Init
+      run: terraform init -migrate-state
 
     - name: Terraform Plan
       run: terraform plan
